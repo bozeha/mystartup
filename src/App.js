@@ -21,6 +21,8 @@ class App extends Component {
 
   
   this.state=({
+    user_status:'not-active',
+    user_name:''
 
   })
   }
@@ -28,12 +30,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1> */}
-        </header>
         
-          <Login list_of_users={users_list}/>
+        {this.state.user_status=='active'?
+        <p>welcome {this.state.user_name}</p>:<p>please log in</p>
+                }
+          <Login app_state={this} list_of_users={users_list}/>
         
       </div>
     );
