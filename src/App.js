@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import './App.css';
 import './js/fb.js';
-import Login from './components/login'
+import Login from './components/login/login';
+import LogInView from './components/login/login_view'
 
 let users_list ={
   users:[
@@ -22,7 +23,8 @@ class App extends Component {
   
   this.state=({
     user_status:'not-active',
-    user_name:''
+    user_name:'',
+    current_view:'big_buttons'
 
   })
   }
@@ -35,7 +37,7 @@ class App extends Component {
         <p>welcome {this.state.user_name}</p>:<p>please log in</p>
                 }
           <Login app_state={this} list_of_users={users_list}/>
-        
+        <LogInView all_app_data={this}/>
       </div>
     );
   }
