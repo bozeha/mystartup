@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
 
-
+import RaisedButton  from 'material-ui/Button';
 
 class BigLoginButton extends Component
 {
@@ -8,10 +8,11 @@ render(props)
 {
     return( 
         
-        <button onClick={()=>this.props.currentState.setState({currentState:5})}>
-        {console.log(this.props.currentState.state)}
-        {this.props.button_name}
-       </button>
+        
+        <RaisedButton ClassName="login_primary"  onClick={()=>this.props.currentState.setState({button_selection:this.props.button_name})}>
+          {console.log(this.props.currentState.state)}
+            {this.props.button_name}
+       </RaisedButton>
 )
 }
 
