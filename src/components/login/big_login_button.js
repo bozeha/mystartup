@@ -9,7 +9,7 @@ render(props)
     return( 
         
         
-        <RaisedButton ClassName="login_primary"  onClick={()=>this.props.currentState.setState({button_selection:this.props.button_name})}>
+        <RaisedButton className="login_primary"  onClick={()=>this.props.currentState.setState({button_selection:this.props.button_name})}>
           {console.log(this.props.currentState.state)}
             {this.props.button_name}
        </RaisedButton>
